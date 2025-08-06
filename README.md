@@ -27,8 +27,7 @@ async fn main() {
 // Blocking
 use chartlyrics::BlockingClient;
 
-#[tokio::main]
-async fn main() {
+fn main() {
     let client = BlockingClient::new().unwrap();
     let result = client.search_lyric_direct("Numb", "Linkin Park").unwrap();
     println!("{}", result.Lyric); // I'm tired of being what you want me to be...
