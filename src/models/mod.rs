@@ -37,6 +37,5 @@ impl std::ops::Deref for ArrayOfSearchLyricResult {
 }
 
 pub(crate) fn xml_to_model<T>(xml: &str) -> Result<T, serde_xml_rs::Error> where T: serde::de::DeserializeOwned {
-    dbg!(xml);
     serde_xml_rs::from_str::<T>(xml)
 }
