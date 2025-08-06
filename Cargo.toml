@@ -7,6 +7,7 @@ authors = ["Marley <marley@marlstar.com>"]
 homepage = "https://github.com/Marlstar/chartlyrics-rs"
 repository = "https://github.com/Marlstar/chartlyrics-rs"
 keywords = ["lyric", "lyrics", "ChartLyrics"]
+license = "MIT"
 
 [dependencies]
 reqwest = "0.12.22"
