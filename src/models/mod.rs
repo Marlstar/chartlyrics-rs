@@ -2,30 +2,30 @@
 #[derive(serde::Serialize, serde::Deserialize)]
 #[derive(Debug, Clone)]
 pub struct GetLyricResult {
-    pub Lyric: String,
-    pub TrackId: usize,
-    pub LyricChecksum: Option<String>,
-    pub LyricId: usize,
-    pub LyricSong: String,
-    pub LyricArtist: String,
-    pub LyricUrl: String,
-    pub LyricCovertArtUrl: Option<String>,
-    pub LyricRank: usize,
-    pub LyricCorrectUrl: String,
+    #[serde(rename = "Lyric")] pub lyrics: String,
+    TrackId: usize,
+    LyricChecksum: Option<String>,
+    #[serde(rename = "LyricId")] pub id: usize,
+    #[serde(rename = "LyricSong")] pub song: String,
+    #[serde(rename = "LyricArtist")] pub artist: String,
+    LyricUrl: String,
+    LyricCovertArtUrl: Option<String>,
+    LyricRank: usize,
+    LyricCorrectUrl: String,
 }
 
 #[allow(non_snake_case)]
 #[derive(serde::Serialize, serde::Deserialize)]
 #[derive(Debug, Clone)]
 pub struct SearchLyricResult {
-    pub TrackId: usize,
-    pub LyricChecksum: Option<String>,
-    pub LyricId: usize,
-    pub SongUrl: String,
-    pub ArtistUrl: String,
-    pub Artist: String,
-    pub Song: String,
-    pub SongRank: String,
+    TrackId: usize,
+    LyricChecksum: Option<String>,
+    #[serde(rename = "LyricId")] pub id: usize,
+    SongUrl: String,
+    ArtistUrl: String,
+    #[serde(rename = "Artist")] pub artist: String,
+    #[serde(rename = "Song")] pub song: String,
+    SongRank: String,
 }
 #[allow(non_snake_case)]
 #[derive(serde::Serialize, serde::Deserialize)]

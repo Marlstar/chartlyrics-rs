@@ -19,7 +19,7 @@ use chartlyrics::Client;
 async fn main() {
     let client = Client::new().await.unwrap();
     let result = client.search_lyric_direct("Numb", "Linkin Park").await.unwrap();
-    println!("{}", result.Lyric); // I'm tired of being what you want me to be...
+    println!("{}", result.lyrics); // I'm tired of being what you want me to be...
 }
 ```
 
@@ -30,7 +30,7 @@ use chartlyrics::BlockingClient;
 fn main() {
     let client = BlockingClient::new().unwrap();
     let result = client.search_lyric_direct("Numb", "Linkin Park").unwrap();
-    println!("{}", result.Lyric); // I'm tired of being what you want me to be...
+    println!("{}", result.lyrics); // I'm tired of being what you want me to be...
 }
 ```
 
@@ -44,7 +44,7 @@ async fn main() {
     let client = Client::new().await.unwrap();
     let results = client.search_lyric_text("It starts with one thing").await.unwrap();
     for song in results {
-        println!("{}", song.Song); // Thriller, In the End, ...
+        println!("{}", song.song); // Thriller, In the End, ...
     }
 }
 ```
