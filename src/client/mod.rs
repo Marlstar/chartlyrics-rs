@@ -13,6 +13,7 @@ use reqwest::Response as AsyncResponse;
 use reqwest::blocking::Response as BlockingResponse;
 
 #[cfg(feature = "async")]
+#[derive(Debug)]
 pub struct Client {
     client: AsyncReqwestClient,
 }
@@ -30,6 +31,7 @@ impl Client {
 }
 
 #[cfg(feature = "blocking")]
+#[derive(Debug)]
 pub struct BlockingClient {
     client: BlockingReqwestClient,
 }
