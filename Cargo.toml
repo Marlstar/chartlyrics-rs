@@ -1,7 +1,12 @@
 [package]
 name = "chartlyrics"
+description = "Rust bindings for the ChartLyrics lyric API"
 version = "0.1.0"
 edition = "2024"
+authors = ["Marley <marley@marlstar.com>"]
+homepage = "https://github.com/Marlstar/chartlyrics-rs"
+repository = "https://github.com/Marlstar/chartlyrics-rs"
+keywords = ["lyric", "lyrics", "ChartLyrics"]
 
 [dependencies]
 reqwest = "0.12.22"
