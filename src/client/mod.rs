@@ -1,5 +1,6 @@
 mod search_lyric_direct;
 mod search_lyric_text;
+mod get_lyrics;
 
 #[cfg(feature = "async")]
 use reqwest::Client as AsyncReqwestClient;

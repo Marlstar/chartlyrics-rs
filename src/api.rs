@@ -12,3 +12,8 @@ pub fn search_lyric_text(text: &str) -> String {
     let text = escape(text);
     format!("{API_URL}/SearchLyricText?lyricText={text}")
 }
+
+pub fn get_lyric(id: usize, checksum: &str) -> String {
+    let text = escape(checksum);
+    format!("{API_URL}/GetLyric?lyricId={id}&lyricCheckSum={checksum}")
+}
