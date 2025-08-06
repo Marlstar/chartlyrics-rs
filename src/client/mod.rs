@@ -16,6 +16,7 @@ use reqwest::blocking::Response as BlockingResponse;
 pub struct Client {
     client: AsyncReqwestClient,
 }
+#[cfg(feature = "async")]
 impl Client {
     pub async fn new() -> Result<Self, reqwest::Error> {
         Ok(Self {
@@ -32,6 +33,7 @@ impl Client {
 pub struct BlockingClient {
     client: BlockingReqwestClient,
 }
+#[cfg(feature = "blocking")]
 impl BlockingClient {
     pub fn new() -> Result<Self, reqwest::Error> {
         Ok(Self {
