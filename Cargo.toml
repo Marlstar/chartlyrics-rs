@@ -1,0 +1,15 @@
+[package]
+name = "chartlyrics"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+reqwest = "0.12.22"
+serde = { version = "1.0.219", features = ["derive"] }
+serde-xml-rs = "0.8.1"
+url-escape = "0.1.1"
+
+[features]
+default = ["async"]
+async = []
+blocking = ["reqwest/blocking"]
